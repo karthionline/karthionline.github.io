@@ -96,6 +96,16 @@ nav a:hover {
     filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.6));
 }
 
+.main-node-img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    z-index: 5;
+    border: 3px solid #38bdf8;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
+}
+
 .node-ring {
     position: absolute;
     width: 140%;
