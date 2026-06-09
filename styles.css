@@ -399,6 +399,8 @@ footer {
     color: #38bdf8;
 }
 
+
+
 /* Responsiveness Handling */
 @media (max-width: 768px) {
     .hero-container {
