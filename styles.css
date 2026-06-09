@@ -81,26 +81,39 @@ nav a:hover {
 
 .tech-node-network {
     position: relative;
+    /* Maintain the container size */
     width: 200px;
     height: 200px;
     background: radial-gradient(circle, rgba(56,189,248,0.1) 0%, rgba(0,0,0,0) 70%);
+    /* These three properties are critical for proper image centering */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* This class was optimized for the font icon; we must override it for the image */
 .main-node {
+    /* If you still use the icon somewhere, keep this.
+       If you only use the image, this block is technically ignored by the image. */
     font-size: 4.5rem;
     color: #38bdf8;
     z-index: 5;
     filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.6));
 }
 
+/* This is the optimized styling specifically for your image 'karthi.jpg' */
 .main-node-img {
+    /* Step 1: Force a perfect square based on your preferred central size */
     width: 140px;
     height: 140px;
+    
+    /* Step 2: Crop the photo perfectly (crucial for fitting) */
     object-fit: cover;
+    
+    /* Step 3: Turn the square frame into a circle */
     border-radius: 50%;
+    
+    /* Step 4: Layering and styling */
     z-index: 5;
     border: 3px solid #38bdf8;
     box-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
@@ -108,6 +121,7 @@ nav a:hover {
 
 .node-ring {
     position: absolute;
+    /* The ring remains larger than the image/container */
     width: 140%;
     height: 140%;
     border: 1px dashed rgba(56, 189, 248, 0.3);
