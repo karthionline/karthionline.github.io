@@ -3,55 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Portfolio</title>
+    <title>Karthi | Data Scientist & Content Creator</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome for clean icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+    <!-- Header / Navigation -->
     <header>
-        <div class="logo">YN</div>
+        <div class="logo">KARTHI <span class="accent">| DS</span></div>
         <nav>
             <a href="#about">About</a>
+            <a href="#expertise">Expertise</a>
             <a href="#projects">Projects</a>
+            <a href="#content">Content</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
-        <h1>Hi, I'm <span class="highlight">Your Name</span></h1>
-        <p>A passionate Developer / Designer creating awesome digital experiences.</p>
-        <a href="#projects" class="btn">View My Work</a>
-    </section>
-
-    <section id="about" class="container">
-        <h2>About Me</h2>
-        <p>Write a brief, engaging bio here. Talk about your skills, what drives you, and the technologies you love working with (e.g., JavaScript, React, Python, UI/UX design).</p>
-    </section>
-
-    <section id="projects" class="container">
-        <h2>Featured Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>Project One</h3>
-                <p>A short description of what this project does and the tech stack used.</p>
-                <a href="#" class="project-link">View Project →</a>
+        <div class="hero-container">
+            <div class="hero-visual">
+                <!-- Data/ML Tech Graphic Element -->
+                <div class="tech-node-network">
+                    <i class="fab fa-python network-icon main-node"></i>
+                    <div class="node-ring"></div>
+                </div>
             </div>
-            <div class="project-card">
-                <h3>Project Two</h3>
-                <p>A short description of what this project does and the tech stack used.</p>
-                <a href="#" class="project-link">View Project →</a>
+            <div class="hero-text">
+                <h1>Hi, I'm <span class="highlight">Karthi</span>, transforming complex data into clear models and accessible education.</h1>
+                <p>Specializing in Python, ML Ops, and data engineering.</p>
+                <a href="#projects" class="btn">EXPLORE MY WORK</a>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="container">
-        <h2>Get In Touch</h2>
-        <p>I'm always open to discussing new projects, creative ideas, or opportunities.</p>
-        <a href="mailto:your.email@example.com" class="btn">Email Me</a>
+    <!-- About Me Section -->
+    <section id="about" class="container">
+        <h2>ABOUT ME //</h2>
+        <p class="bio-text">
+            With a passion for both deep technical workflows and effective communication, I build end-to-end Data Science solutions, with special focus on Web Scraping, ML Op pipelines, and educating others through engaging content.
+        </p>
     </section>
 
+    <!-- Technical Expertise Section -->
+    <section id="expertise" class="container">
+        <h2>TECHNICAL EXPERTISE</h2>
+        <div class="expertise-grid">
+            
+            <div class="expertise-card">
+                <div class="card-header">
+                    <i class="fas fa-cogs card-icon"></i>
+                    <h3>MACHINE LEARNING OPS</h3>
+                </div>
+                <p>Deployment (Docker, AWS), CI/CD for Models, Pipeline Orchestration.</p>
+                <div class="tech-tags">
+                    <span class="tag"><i class="fab fa-python"></i> Python</span>
+                    <span class="tag"><i class="fas fa-brain"></i> ML</span>
+                </div>
+            </div>
+
+            <div class="expertise-card">
+                <div class="card-header">
+                    <i class="fas fa-database card-icon"></i>
+                    <h3>DATA ENGINEERING & SCALING</h3>
+                </div>
+                <p>Web Scraping (Pandas, BeautifulSoup), Data Persistence, ETL Workflows.</p>
+                <div class="tech-tags">
+                    <span class="tag"><i class="fas fa-table"></i> pandas</span>
+                    <span class="tag"><i class="fas fa-server"></i> SQL</span>
+                </div>
+            </div>
+
+            <div class="expertise-card">
+                <div class="card-header">
+                    <i class="fas fa-video card-icon"></i>
+                    <h3>EDUCATIONAL CONTENT CREATION</h3>
+                </div>
+                <p>Making Data Science Accessible, Coding Tutorials, Insightful Analyses (YouTube).</p>
+                <div class="tech-tags">
+                    <span class="tag"><i class="fab fa-docker"></i> Docker</span>
+                    <span class="tag"><i class="fab fa-aws"></i> AWS</span>
+                    <span class="tag"><i class="fab fa-youtube"></i> YouTube</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="container">
+        <h2>FEATURED PROJECTS</h2>
+        <div class="project-grid">
+
+            <div class="project-card">
+                <div class="project-icon-wrapper">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <h3>AUTOMATED WEB SCRAPING & ML PIPELINE</h3>
+                <p>Automated web scraping & ML pipelines isolating continuous solutions.</p>
+                <a href="#" class="btn-repo">View Repository</a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon-wrapper">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>PREDICTIVE DATA MODEL FOR FINANCE/HEALTHCARE</h3>
+                <p>Predictive data model for predictive regression vs. specific sector domains.</p>
+                <a href="#" class="btn-repo">View Repository</a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon-wrapper">
+                    <i class="fas fa-photo-film"></i>
+                </div>
+                <h3>EDUCATIONAL DATA VISUALIZATION SERIES</h3>
+                <p>Educational data visualization series simplified metrics and educational data visualization layouts.</p>
+                <a href="#" class="btn-repo">View Repository</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Latest Content Section -->
+    <section id="content" class="container">
+        <h2>LATEST CONTENT</h2>
+        <div class="youtube-channel-info">
+            <p><i class="fab fa-youtube color-yt"></i> YouTube: <span class="channel-name">KarthiOnData</span></p>
+        </div>
+        <div class="video-grid">
+            <!-- Video 1 -->
+            <div class="video-card">
+                <div class="video-thumbnail-placeholder">
+                    <i class="fab fa-youtube play-overlay"></i>
+                    <span class="vid-tag">ML Workflow</span>
+                </div>
+                <a href="#" class="video-link">post/link: KarthiOnData...</a>
+            </div>
+            <!-- Video 2 -->
+            <div class="video-card">
+                <div class="video-thumbnail-placeholder">
+                    <i class="fab fa-youtube play-overlay"></i>
+                    <span class="vid-tag">Pandas Tips</span>
+                </div>
+                <a href="#" class="video-link">post/link: KarthiOnData...</a>
+            </div>
+            <!-- Video 3 -->
+            <div class="video-card">
+                <div class="video-thumbnail-placeholder">
+                    <i class="fab fa-youtube play-overlay"></i>
+                    <span class="vid-tag">Web Scraping</span>
+                </div>
+                <a href="#" class="video-link">post/link: KarthiOnData...</a>
+            </div>
+            <!-- Video 4 -->
+            <div class="video-card">
+                <div class="video-thumbnail-placeholder">
+                    <i class="fab fa-youtube play-overlay"></i>
+                    <span class="vid-tag">Data Careers</span>
+                </div>
+                <a href="#" class="video-link">post/link: KarthiOnData...</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container">
+        <h2>GET IN TOUCH</h2>
+        <p>Let's collaborate on data projects, machine learning architectures, or content partnerships.</p>
+        <div style="margin-top: 20px;">
+            <a href="mailto:your.email@example.com" class="btn">Email Me</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Your Name. Built with HTML & CSS.</p>
+        <p>&copy; 2026 KARTHI | All rights reserved.</p>
+        <div class="footer-icons">
+            <i class="fab fa-github"></i>
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-youtube"></i>
+        </div>
     </footer>
 
 </body>
