@@ -104,9 +104,26 @@ nav a:hover {
 /* This is the optimized styling specifically for your image 'karthi.jpg' */
 .main-node-img {
     /* Step 1: Force a perfect square based on your preferred central size */
-    width: 140px;
-    height: 140px;
-    
+   /* Circle Image Wrapper */
+.profile-img-container {
+  width: 180px;            /* Adjust size as needed */
+  height: 180px;           /* Must match width for a perfect circle */
+  border-radius: 50%;
+  overflow: hidden;        /* Clips the image within circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid #ffffff; /* Optional border styling */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Image inside circle */
+.profile-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* Ensures image fills circle without distortion */
+  object-position: center;
+}
     /* Step 2: Crop the photo perfectly (crucial for fitting) */
     object-fit: cover;
     
