@@ -111,7 +111,7 @@ nav a:hover {
     object-fit: cover;
     
     /* Step 3: Turn the square frame into a circle */
-    border-radius: 50%;
+    border-radius: 25%;
     
     /* Step 4: Layering and styling */
     z-index: 5;
