@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    background-color: #11161d;
+    background-color: #0d1117;
     color: #e2e8f0;
     line-height: 1.6;
 }
@@ -22,17 +22,18 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 8%;
-    background-color: rgba(17, 22, 29, 0.95);
-    border-bottom: 1px solid #1e293b;
+    background-color: #0d1117;
+    border-bottom: 1px solid #161b22;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
 header .logo {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 700;
     letter-spacing: 1px;
+    color: #ffffff;
 }
 
 header .logo .accent {
@@ -40,16 +41,16 @@ header .logo .accent {
 }
 
 nav a {
-    margin-left: 25px;
+    margin-left: 20px;
     text-decoration: none;
     color: #94a3b8;
     font-weight: 500;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #38bdf8;
+    color: #ffffff;
 }
 
 /* Hero Section */
@@ -58,7 +59,7 @@ nav a:hover {
     display: flex;
     align-items: center;
     padding: 40px 8%;
-    background: radial-gradient(circle at 20% 30%, #1e293b 0%, #11161d 70%);
+    background: radial-gradient(circle at 20% 30%, #1e293b 0%, #0d1117 70%);
     border-bottom: 1px solid #1e293b;
 }
 
@@ -71,82 +72,6 @@ nav a:hover {
     max-width: 1200px;
     margin: 0 auto;
 }
-
-/* Interactive Node Ring Visual Styling */
-.hero-visual {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.tech-node-network {
-    position: relative;
-    /* Maintain the container size */
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(circle, rgba(56,189,248,0.1) 0%, rgba(0,0,0,0) 70%);
-    /* These three properties are critical for proper image centering */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* This class was optimized for the font icon; we must override it for the image */
-.main-node {
-    /* If you still use the icon somewhere, keep this.
-       If you only use the image, this block is technically ignored by the image. */
-    font-size: 4.5rem;
-    color: #38bdf8;
-    z-index: 5;
-    filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.6));
-}
-
-/* This is the optimized styling specifically for your image 'karthi.jpg' */
-.main-node-img {
-    /* Step 1: Force a perfect square based on your preferred central size */
-   /* Circle Image Wrapper */
-.profile-img-container {
-  width: 180px;            /* Adjust size as needed */
-  height: 180px;           /* Must match width for a perfect circle */
-  border-radius: 50%;
-  overflow: hidden;        /* Clips the image within circle */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 4px solid #ffffff; /* Optional border styling */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-/* Image inside circle */
-.profile-img-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;       /* Ensures image fills circle without distortion */
-  object-position: center;
-}
-    /* Step 2: Crop the photo perfectly (crucial for fitting) */
-    object-fit: cover;
-    
-    /* Step 3: Turn the square frame into a circle */
-    border-radius: 25%;
-    
-    /* Step 4: Layering and styling */
-    z-index: 5;
-    border: 3px solid #38bdf8;
-    box-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
-}
-
-.node-ring {
-    position: absolute;
-    /* The ring remains larger than the image/container */
-    width: 140%;
-    height: 140%;
-    border: 1px dashed rgba(56, 189, 248, 0.3);
-    border-radius: 50%;
-    animation: spin 20s linear infinite;
-}
-
-@keyframes spin { 100% { transform: rotate(360deg); } }
 
 .hero-text h1 {
     font-size: 2.2rem;
@@ -164,6 +89,133 @@ nav a:hover {
     font-size: 1.1rem;
     color: #94a3b8;
     margin-bottom: 30px;
+}
+
+.main-node-img {
+    /* Scale up: ~280px-320px creates visual balance with the text side */
+    width: clamp(220px, 25vw, 300px);
+    height: clamp(220px, 25vw, 300px);
+    
+    aspect-ratio: 1 / 1; 
+    object-fit: cover; 
+    object-position: center top; 
+    border-radius: 50%;
+    display: block;
+    overflow: hidden; 
+    z-index: 5;
+    border: 3px solid #38bdf8;
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.6);
+    
+    /* Prevents the image from shrinking inside flex layouts */
+    flex-shrink: 0; 
+}
+
+/* Container Formatting */
+.container {
+    padding: 80px 8%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container h2 {
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.bio-text {
+    font-size: 1.25rem;
+    color: #cbd5e1;
+    max-width: 850px;
+    line-height: 1.7;
+}
+
+/* Professional Experience Styling */
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.experience-card {
+    background-color: #131922;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #1e293b;
+    transition: border-color 0.3s ease;
+}
+
+.experience-card:hover {
+    border-color: #38bdf8;
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.exp-header h3 {
+    color: #ffffff;
+    font-size: 1.1rem;
+}
+
+.exp-header .company {
+    color: #38bdf8;
+}
+
+.exp-date {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.exp-bullets {
+    padding-left: 20px;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+}
+
+.exp-bullets li {
+    margin-bottom: 8px;
+}
+
+/* Credentials Section Styling */
+.credentials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.cred-card {
+    background-color: #131922;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #21262d;
+}
+
+.cred-card h4 {
+    color: #ffffff;
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.cred-card p {
+    color: #38bdf8;
+    font-size: 0.85rem;
+}
+
+.project-tech {
+    font-size: 0.75rem;
+    color: #38bdf8;
+    margin-bottom: 15px;
+    font-weight: 600;
 }
 
 /* Buttons */
@@ -188,48 +240,25 @@ nav a:hover {
     box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
 }
 
-/* Base Grid Content Formatting */
-.container {
-    padding: 80px 8%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.container h2 {
-    font-size: 1.1rem;
-    letter-spacing: 2px;
-    color: #94a3b8;
-    margin-bottom: 35px;
-    font-weight: 700;
-}
-
-.bio-text {
-    font-size: 1.25rem;
-    color: #cbd5e1;
-    max-width: 850px;
-    line-height: 1.7;
-}
-
-/* Expertise Cards with Futuristic Blue Glow borders */
+/* Expertise Cards */
 .expertise-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
+    gap: 20px;
 }
 
 .expertise-card {
-    background-color: #161f2a;
-    padding: 30px;
-    border-radius: 12px;
-    border: 1px solid #1e293b;
-    box-shadow: inset 0 0 12px rgba(56, 189, 248, 0.03);
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    background-color: #131922;
+    padding: 28px;
+    border-radius: 8px;
+    border: 1px solid #1f2937;
+    transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
 }
 
 .expertise-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-2px);
     border-color: #38bdf8;
-    box-shadow: 0 0 20px rgba(56, 189, 248, 0.1);
+    background-color: #16202c;
 }
 
 .card-header {
@@ -239,76 +268,85 @@ nav a:hover {
 }
 
 .card-icon {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: #38bdf8;
-    margin-right: 15px;
+    margin-right: 12px;
 }
 
 .expertise-card h3 {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #ffffff;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 .expertise-card p {
     color: #94a3b8;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     margin-bottom: 20px;
-    min-height: 45px;
+    line-height: 1.5;
+    min-height: 48px;
 }
 
+/* Badges / Tech Tags */
 .tech-tags {
     display: flex;
-    gap: 10px;
+    gap: 8px;
     flex-wrap: wrap;
 }
 
 .tag {
     background-color: #1e293b;
-    color: #e2e8f0;
-    padding: 4px 10px;
-    border-radius: 4px;
+    color: #94a3b8;
+    padding: 6px 12px;
+    border-radius: 6px;
     font-size: 0.75rem;
     font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #334155;
 }
 
 .tag i {
-    margin-right: 4px;
+    margin-right: 6px;
+    font-size: 0.8rem;
+    color: #cbd5e1;
 }
 
 /* Projects Cards Section */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 .project-card {
-    background-color: #151b23;
-    padding: 35px 25px;
+    background-color: #131922;
+    padding: 35px 20px;
     border-radius: 8px;
-    border: 1px solid #21262d;
+    border: 1px solid #1f2937;
     text-align: center;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
 .project-card:hover {
-    background-color: #1c232c;
-    border-color: #30363d;
+    background-color: #16202c;
+    border-color: #38bdf8;
 }
 
 .project-icon-wrapper {
-    font-size: 2.2rem;
+    font-size: 2rem;
     color: #38bdf8;
     margin-bottom: 20px;
-    opacity: 0.8;
 }
 
 .project-card h3 {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     color: #ffffff;
-    margin-bottom: 12px;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 .project-card p {
@@ -440,9 +478,13 @@ footer {
     color: #38bdf8;
 }
 
-
-
 /* Responsiveness Handling */
+@media (max-width: 900px) {
+    .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
 @media (max-width: 768px) {
     .hero-container {
         grid-template-columns: 1fr;
@@ -460,3 +502,59 @@ footer {
         gap: 15px;
     }
 }
+
+
+.contact-actions {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 24px;
+    }
+
+.contact-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 24px 18px;
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(89, 216, 255, 0.24);
+    border-radius: 18px;
+    text-decoration: none;
+    color: #e5f7ff;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+.contact-action:hover {
+    transform: translateY(-4px);
+    border-color: rgba(89, 216, 255, 0.6);
+    box-shadow: 0 16px 30px rgba(89, 216, 255, 0.12);
+    }
+
+.contact-action i {
+    font-size: 1.7rem;
+    color: #59d8ff;
+    }
+
+.contact-action span {
+    font-size: 0.8rem;
+    letter-spacing: 0.12rem;
+    text-transform: uppercase;
+    color: #a9d9ef;
+    }
+
+.contact-action strong {
+    font-size: 1rem;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 600;
+    }
+
+@media (max-width: 768px) {
+    .contact-actions {
+         grid-template-columns: 1fr;
+        }
+    }
+    
